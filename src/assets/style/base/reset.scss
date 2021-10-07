@@ -1,0 +1,168 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  font-size: 1rem;
+}
+
+html,
+body {
+  word-break: break-word;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  line-height: 1.5;
+  font-family: system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: $gray-02;
+  background-color: $bgc-01;
+
+  ::selection {
+    background-color: $bgc-02;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    scroll-behavior: smooth;
+  }
+}
+
+header {
+  z-index: 2;
+}
+
+main,
+footer {
+  z-index: 1;
+}
+
+$exponent: 1;
+$scale: 1.25;
+
+@for $i from 6 through 1 {
+  $exponent: $exponent * $scale;
+
+  h#{$i} {
+    font-size: #{str-slice("" + $exponent, 0, 5)}rem;
+  }
+}
+
+h1 {
+  margin: 0 0 0.5em 0;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0.5em 0;
+}
+
+blockquote {
+  width: fit-content;
+  width: -moz-fit-content;
+  margin: 0;
+  padding: 0.5em 1em;
+  border-radius: $bdr;
+  border-left: 0.25rem solid $aux-blue-n;
+  font-style: italic;
+  background-color: $bgc-02;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+b,
+strong {
+  font-weight: 600;
+}
+
+sub,
+sup {
+  position: relative;
+  vertical-align: baseline;
+}
+
+span {
+  display: inline-block;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+a {
+  &[href^="http:"],
+  &[href^="https:"] {
+    display: inline-block;
+    text-decoration-line: underline;
+    color: $aux-blue-n;
+
+    &:focus,
+    &:hover {
+      color: $aux-blue-n;
+    }
+  }
+}
+
+figure,
+article {
+  margin: 0;
+  padding: 0;
+  border-style: none;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  border-style: none;
+}
+
+details {
+  width: 100%;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-flow: wrap column;
+  gap: 0.75rem;
+  border-radius: $bdr;
+  border: 0.0625em solid $bdr;
+  background-color: $bgc-02;
+
+  summary {
+    padding: 1rem;
+    outline-style: none;
+    user-select: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 500;
+    background-color: $bgc-02;
+
+    &::-webkit-details-marker {
+      color: $gray-02;
+    }
+  }
+
+  > :not(summary) {
+    margin: 0;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  &[open] {
+    summary {
+      border-bottom: 0.0625em solid $bdr;
+    }
+  }
+}
