@@ -1,4 +1,6 @@
-.lx-row {
+$row-gap: 1rem;
+
+.row {
   width: 100%;
   display: flex;
   flex-flow: wrap row;
@@ -11,7 +13,7 @@
   }
 }
 
-.lx-col {
+.col {
   display: block;
   flex-basis: 0;
   flex-grow: 1;
@@ -26,11 +28,11 @@
 }
 
 @media screen and (max-width: 64rem) {
-  .lx-row {
+  .row {
     flex-flow: wrap column;
   }
 
-  .lx-col {
+  .col {
     width: 100%;
 
     @for $i from 0 through 12 {

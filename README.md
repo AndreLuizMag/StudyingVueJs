@@ -1,4 +1,4 @@
-# project
+# studying
 
 ## Project setup
 ```

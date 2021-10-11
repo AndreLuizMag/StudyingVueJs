@@ -1,6 +1,5 @@
-.lx-container {
+.container {
   $i: 50;
-
   @while $i <= 100 {
     &-#{$i} {
       width: percentage($i/100);
@@ -11,16 +10,14 @@
     $i: $i + 5;
   }
 }
-
 @media (max-width: 48rem) {
-  .lx-container {
+  .container {
     $i: 50;
     @while $i <= 100 {
       &-#{$i} {
         max-width: #{($i / 100) * 48}rem;
       }
+      $i: $i + 5;
     }
-
-    $i: $i + 5;
   }
 }

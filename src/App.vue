@@ -1,20 +1,17 @@
 <template>
-  <Header />
-  <main>
-    <h1>Home</h1>
-  </main>
-  <Footer />
+  <div class="container-50">
+    <div class="row">
+      <div class="col">
+        <SearchForm />
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
-import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
+import { SearchForm } from './components/molecules'
 
 export default {
-  name: "App",
-  components: {
-    Header,
-    Footer,
-  },
-};
+  components: { SearchForm }
+}
 </script>
