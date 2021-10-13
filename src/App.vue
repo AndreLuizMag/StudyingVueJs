@@ -1,17 +1,20 @@
 <template>
-  <div class="container-50">
-    <div class="row">
-      <div class="col">
-        <SearchForm />
-      </div>
-    </div>
-  </div>
+  <Home />
 </template>
 
 <script>
-import { SearchForm } from './components/molecules'
+import { Home } from '@/components/pages'
 
 export default {
-  components: { SearchForm }
+  components: { Home }
 }
 </script>
+
+<style lang="scss">
+main {
+  min-height: 100vh;
+  .row {
+    padding: 4rem 0;
+  }
+}
+</style>

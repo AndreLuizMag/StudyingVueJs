@@ -1,10 +1,14 @@
-\:root {
+:root {
   //transition
   --tsd: 0.25s;
   --ttf: cubic-bezier(0, 0, 1, 1);
 
   //radius
-  --bdr: 12px;
+  --bdr-b: 12px;
+  --bdr-n: 6px;
+  --bdr-s: 4px;
+
+  --bor: 2px;
 }
 
 //transition
@@ -12,7 +16,9 @@ $tsd: var(--tsd);
 $ttf: var(--ttf);
 
 //radius
-$bdr: var(--bdr);
+$bdr-b: var(--bdr-b);
+$bdr-n: var(--bdr-n);
+$bdr-s: var(--bdr-s);
 
 //border
-$bor: 3px;
+$bor: var(--bor);

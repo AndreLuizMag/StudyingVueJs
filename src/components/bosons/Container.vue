@@ -1,0 +1,44 @@
+<template>
+  <div :class="sizeContainer">
+    <slot />
+  </div>
+</template>
+
+<script>
+export default {
+  props: {
+    size: { Type: String, require: true }
+  },
+  computed: {
+    sizeContainer() {
+      return `container-${this.size}`
+    }
+  }
+}
+</script>
+
+<style lang="scss" scoped>
+.container {
+  $i: 50;
+  @while $i <= 100 {
+    &-#{$i} {
+      width: percentage($i/100);
+      max-width: #{($i / 100) * 120}rem;
+      min-width: #{($i / 100) * 20}rem;
+      margin: 0 auto;
+    }
+    $i: $i + 5;
+  }
+}
+@media (max-width: 48rem) {
+  .container {
+    $i: 50;
+    @while $i <= 100 {
+      &-#{$i} {
+        max-width: #{($i / 100) * 48}rem;
+      }
+      $i: $i + 5;
+    }
+  }
+}
+</style>

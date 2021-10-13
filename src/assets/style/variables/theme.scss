@@ -1,59 +1,24 @@
-\:root {
+:root {
   // ---- Colors ---- //
 
   --w: hsla(0, 0%, 100%, 1);
   --b: hsla(0, 0%, 0%, 1);
 
   // background
-  --bgc-01: hsl(30, 17%, 98%);
-  --bgc-02: hsl(0, 0%, 100%);
+  --bgc-light-d: hsla(0, 0%, 95%, 1);
+  --bgc-light-l: hsla(0, 0%, 100%, 1);
+
+  //font
+  --font-dark-d: hsla(0, 0%, 5%, 1);
+  --font-dark-n: hsla(0, 0%, 20%, 1);
+  --font-dark-l: hsla(0, 0%, 40%, 1);
 
   // palette
-  --pri-d: hsl(335, 94%, 19%);
-  --pri-n: hsl(335, 80%, 28%);
-  --pri-l: hsl(335, 80%, 43%);
-
-  --sec-d: hsl(156, 81%, 13%);
-  --sec-n: hsl(120, 49%, 35%);
-  --sec-d: hsl(155, 80%, 43%);
-
-  // auxiliary
-  --gray-01: hsl(253, 13%, 22%);
-  --gray-02: hsl(253, 9%, 32%);
-  --gray-03: hsl(252, 8%, 39%);
-  --gray-04: hsl(252, 6%, 50%);
-
-  --aux-red-d: hsl(331, 59%, 56%);
-  --aux-red-n: hsl(337, 72%, 68%);
-  --aux-red-l: hsl(343, 84%, 81%);
-
-  --aux-orange-d: hsl(35, 85%, 46%);
-  --aux-orange-n: hsl(35, 100%, 55%);
-  --aux-orange-l: hsl(35, 100%, 66%);
-
-  --aux-green-d: hsl(178, 61%, 46%);
-  --aux-green-n: hsl(173, 66%, 61%);
-  --aux-green-l: hsl(168, 80%, 76%);
-
-  --aux-blue-d: hsl(234, 68%, 61%);
-  --aux-blue-n: hsl(234, 88%, 71%);
-  --aux-blue-l: hsl(234, 92%, 80%);
-
-  // types
-  --typ-sparkling-01: hsl(46, 42%, 74%);
-
-  --typ-white-01: hsl(48, 69%, 75%);
-  --typ-white-02: hsl(49, 100%, 76%);
-  --typ-white-03: hsl(39, 95%, 75%);
-
-  --typ-dessert-01: hsl(27, 50%, 55%);
-
-  --typ-rose-01: hsl(0, 81%, 79%);
-  --typ-rose-02: hsl(0, 70%, 68%);
-
-  --typ-red-01: hsl(347, 62%, 39%);
-  --typ-red-02: hsl(344, 66%, 26%);
-  --typ-red-03: hsl(356, 62%, 53%);
+  --blue-dark: hsla(220, 90%, 40%, 1);
+  --blue-darken: hsla(220, 90%, 60%, 1);
+  --blue-normal: hsla(220, 91%, 75%, 1);
+  --blue-lighten: hsla(220, 90%, 85%, 1);
+  --blue-light: hsla(222, 92%, 95%, 1);
 }
 
 // ---- Colors ---- //
@@ -62,52 +27,17 @@ $w: var(--w);
 $b: var(--b);
 
 // background
-$bgc-01: var(--bgc-01);
-$bgc-02: var(--bgc-02);
+$bgc-light-d: var(--bgc-light-d);
+$bgc-light-l: var(--bgc-light-l);
+
+//font
+$font-dark-d: var(--font-dark-d);
+$font-dark-n: var(--font-dark-n);
+$font-dark-l: var(--font-dark-l);
 
 // palette
-$pri-d: var(--pri-d);
-$pri-n: var(--pri-n);
-$pri-l: var(--pri-l);
-
-$sec-d: var(--sec-d);
-$sec-n: var(--sec-n);
-$sec-d: var(--sec-d);
-
-// auxiliary
-$gray-01: var(--gray-01);
-$gray-02: var(--gray-02);
-$gray-03: var(--gray-03);
-$gray-04: var(--gray-04);
-
-$aux-red-d: var(--aux-red-d);
-$aux-red-n: var(--aux-red-n);
-$aux-red-l: var(--aux-red-l);
-
-$aux-orange-d: var(--aux-orange-d);
-$aux-orange-n: var(--aux-orange-n);
-$aux-orange-l: var(--aux-orange-l);
-
-$aux-green-d: var(--aux-green-d);
-$aux-green-n: var(--aux-green-n);
-$aux-green-l: var(--aux-green-l);
-
-$aux-blue-d: var(--aux-blue-d);
-$aux-blue-n: var(--aux-blue-n);
-$aux-blue-l: var(--aux-blue-l);
-
-// types
-$typ-sparkling-01: var(--typ-sparkling-01);
-
-$typ-white-01: var(--typ-white-01);
-$typ-white-02: var(--typ-white-02);
-$typ-white-03: var(--typ-white-03);
-
-$typ-dessert-01: var(--typ-dessert-01);
-
-$typ-rose-01: var(--typ-rose-01);
-$typ-rose-02: var(--typ-rose-02);
-
-$typ-red-01: var(--typ-red-01);
-$typ-red-02: var(--typ-red-02);
-$typ-red-03: var(--typ-red-03);
+$blue-dark: var(--blue-dark);
+$blue-darken: var(--blue-darken);
+$blue-normal: var(--blue-normal);
+$blue-lighten: var(--blue-lighten);
+$blue-light: var(--blue-light);

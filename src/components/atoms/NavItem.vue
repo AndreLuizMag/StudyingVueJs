@@ -23,15 +23,15 @@ export default {
   font-weight: bold;
   text-decoration: none;
   line-height: 1;
-  color: black;
-  border-radius: 4px;
-  transition-duration: 0.25s;
-  transition-property: color background-color;
-  transition-timing-function: ease-in;
+  color: #4d4a59;
+  border-radius: var(--bdr-s);
+  transition-duration: var(--tsd);
+  transition-property: color, background-color;
+  transition-timing-function: var(--ttf);
 
   &:hover {
-    color: #0a47c2;
-    background-color: #e7eefe;
+    color: var(--blue-dark);
+    background-color: var(--blue-light);
   }
 }
 </style>

@@ -21,11 +21,11 @@ body {
   line-height: 1.5;
   font-family: system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
-  color: $gray-02;
-  background-color: $bgc-01;
+  color: $font-dark-n;
+  background-color: $bgc-light-l;
 
   ::selection {
-    background-color: $bgc-02;
+    background-color: $blue-light;
   }
 
   @media (prefers-reduced-motion: no-preference) {
@@ -49,7 +49,7 @@ $scale: 1.25;
   $exponent: $exponent * $scale;
 
   h#{$i} {
-    font-size: #{str-slice("" + $exponent, 0, 5)}rem;
+    font-size: #{str-slice('' + $exponent, 0, 5)}rem;
   }
 }
 
@@ -65,15 +65,24 @@ h6 {
   margin: 0.5em 0;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $font-dark-d;
+}
+
 blockquote {
   width: fit-content;
   width: -moz-fit-content;
   margin: 0;
   padding: 0.5em 1em;
-  border-radius: $bdr;
-  border-left: 0.25rem solid $aux-blue-n;
+  border-radius: $bdr-s;
+  border-left: 0.25rem solid $blue-normal;
   font-style: italic;
-  background-color: $bgc-02;
+  background-color: $bgc-light-d;
 }
 
 p {
@@ -102,15 +111,15 @@ button {
 }
 
 a {
-  &[href^="http:"],
-  &[href^="https:"] {
+  &[href^='http:'],
+  &[href^='https:'] {
     display: inline-block;
     text-decoration-line: underline;
-    color: $aux-blue-n;
+    color: $blue-normal;
 
     &:focus,
     &:hover {
-      color: $aux-blue-n;
+      color: $blue-normal;
     }
   }
 }
@@ -136,9 +145,9 @@ details {
   display: flex;
   flex-flow: wrap column;
   gap: 0.75rem;
-  border-radius: $bdr;
-  border: 0.0625em solid $bdr;
-  background-color: $bgc-02;
+  border-radius: $bdr-s;
+  border: 0.0625em solid $bdr-s;
+  background-color: $bgc-light-d;
 
   summary {
     padding: 1rem;
@@ -147,10 +156,10 @@ details {
     cursor: pointer;
     font-size: 1.1rem;
     font-weight: 500;
-    background-color: $bgc-02;
+    background-color: $bgc-light-d;
 
     &::-webkit-details-marker {
-      color: $gray-02;
+      color: $font-dark-n;
     }
   }
 
@@ -162,7 +171,7 @@ details {
 
   &[open] {
     summary {
-      border-bottom: 0.0625em solid $bdr;
+      border-bottom: 0.0625em solid $bdr-s;
     }
   }
 }

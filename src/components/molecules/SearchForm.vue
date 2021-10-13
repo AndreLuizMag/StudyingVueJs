@@ -33,21 +33,26 @@ export default {}
 <style lang="scss" scoped>
 .search-bar {
   position: relative;
-  border-radius: 4px;
+  border-radius: var(--bdr-s);
   overflow: hidden;
 
   input {
     width: 100%;
     padding: 0.75rem 1rem 0.75rem calc(1rem + 25px);
-    border: 2px solid #f4f4f4;
+    border: 2px solid var(--bgc-light-d);
     outline: 0;
-    transition-duration: 0.25s;
+    transition-duration: var(--tsd);
     transition-property: box-shadow;
-    transition-timing-function: ease-in;
+    transition-timing-function: var(--ttf);
 
-    &:focus,
-    &:focus-visible {
-      box-shadow: inset 0px 0px 0px 2px #e7eefe;
+    &:focus {
+      & + .icon {
+        svg {
+          path {
+            stroke: var(--blue-dark);
+          }
+        }
+      }
     }
   }
 
@@ -58,7 +63,10 @@ export default {}
 
     svg {
       path {
-        stroke: #4d4a59;
+        transition-duration: var(--tsd);
+        transition-property: stroke;
+        transition-timing-function: var(--ttf);
+        stroke: var(--font-dark-n);
       }
     }
   }
@@ -70,13 +78,7 @@ export default {}
     position: absolute;
     bottom: 0;
     left: 0;
-    background-color: #86acf9;
-  }
-
-  &:focus {
-    &::before {
-      background-color: red;
-    }
+    background-color: var(--blue-normal);
   }
 }
 </style>

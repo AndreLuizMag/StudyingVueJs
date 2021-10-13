@@ -14,9 +14,10 @@
 
 <style lang="scss" scoped>
 .logo {
+  display: inherit;
   svg {
     rect {
-      fill: black;
+      fill: var(--font-dark-n);
     }
   }
 }
